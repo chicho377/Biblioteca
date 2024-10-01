@@ -2,7 +2,7 @@
 package main;
 
 public class Libro extends Producto implements Describible {
-    // atributo del libro
+    // atributo de los libros
     private String autor;
 
     // constructor con parametros
