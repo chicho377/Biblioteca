@@ -32,8 +32,20 @@ public class Main {
             System.out.println("3. Salir");
             System.out.print("Elija una opcion: ");
             
-            // inicialixe la variable opcion
+            // inicializacion de la variable opcion
             opcion = Integer.parseInt(scanner.nextLine());
+            
+            // switch para el control de opciones del menu
+            switch(opcion){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    break;
+            }
         } while (opcion != 3);
     }
 }
