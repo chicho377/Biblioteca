@@ -67,12 +67,22 @@ Funcion menu():
 
         Si opcion == 1:
             Leer nombre, precio y autor
+
+	    Hacer mientras precio < 0:
+                Mostrar "El precio no puede ser negativo. Ingrese un precio valido:"
+                Leer precio
+
             Crear un nuevo Libro(nombre, precio, autor)
             Biblioteca.incrementarContador()
             Mostrar detalles del libro
         
         Si opcion == 2:
             Leer nombre, precio y edicion
+
+            Hacer mientras precio < 0:
+                Mostrar "El precio no puede ser negativo. Ingrese un precio valido:"
+                Leer precio
+
             Crear una nueva Revista(nombre, precio, edicion)
             Biblioteca.incrementarContador()
             Mostrar detalles de la revista
