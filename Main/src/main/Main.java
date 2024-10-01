@@ -56,6 +56,19 @@ public class Main {
                             System.out.println("El precio no puede ser negativo. Intente de nuevo.");
                         }
                     } while (precioLibro < 0); // validacion de precio negativo
+                    
+                    // se solicita el autor del libro
+                    System.out.println("Ingrese el autor del libro:");
+                    String autor = scanner.nextLine();
+
+                    // se crea el objeto libro
+                    Libro libro = new Libro(nombreLibro, precioLibro, autor);
+                    // se usan sus metodos, tanto el de la abstracta como la interfaz que fueron sobre escritos
+                    libro.imprimirDetalles();
+                    libro.describir();
+                    // se llama el metodo estatico para el contador
+                    Biblioteca.contarProductos();
+                    
                     break;
                 case 2:
                     // opcion 2 agregar revista
@@ -76,6 +89,18 @@ public class Main {
                             System.out.println("El precio no puede ser negativo. Intente de nuevo.");
                         }
                     } while (precioRevista < 0); // validacion de precio negativo
+                    
+                    // se solicita la edicion de la revista
+                    System.out.println("Ingrese la edicion de la revista:");
+                    int edicion = Integer.parseInt(scanner.nextLine());
+                    
+                    // se crea el objeto revista
+                    Revista revista = new Revista(nombreRevista, precioRevista, edicion);
+                    // se usa su metodoto sobre escrito de la abstracta
+                    revista.imprimirDetalles();
+                    // se llama el metodo estatico para el contador
+                    Biblioteca.contarProductos();
+                    
                     break;
                 case 3:
                     // opcion 3 salir
@@ -87,5 +112,8 @@ public class Main {
                     break;
             }
         } while (opcion != 3);
+        
+        // mostrar el total de productos ingresados al salir
+        System.out.println("Cantidad total de productos ingresados: " + Biblioteca.getContadorProductos());
     }
 }
