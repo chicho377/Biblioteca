@@ -3,8 +3,8 @@ package main;
 
 public abstract class Producto {
     // atributos de los productos
-    private String nombre;
-    private double precio;
+    protected String nombre;
+    protected double precio;
 
     // constructor con parametrox
     public Producto(String nombre, double precio) {
