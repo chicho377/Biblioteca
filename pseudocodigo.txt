@@ -23,3 +23,16 @@ Clase Libro (extiende Producto, implementa Describible)
             Mostrar "Autor: " + autor
         describir():
             Mostrar "Descripcion del libro: " + nombre + " por " + autor
+
+// clase Revista
+
+Clase Revista (extiende Producto)
+    Atributos:
+        edicion (String)
+
+    Metodos:
+        Constructor(nombre, precio, edicion)
+        imprimirDetalles():
+            Mostrar "Titulo: " + nombre
+            Mostrar "Precio: " + precio
+            Mostrar "Edicion: " + edicion
