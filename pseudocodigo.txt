@@ -53,3 +53,41 @@ Clase Biblioteca
             Retornar contadorProductos
         Metodo estatico incrementarContador():
             contadorProductos += 1
+
+// function menu, para hacerlo fuera del main
+
+Funcion menu():
+    Inicializar variable opcion
+
+    Hacer mientras no salir:
+        Mostrar "1. Agregar libro"
+        Mostrar "2. Agregar revista"
+        Mostrar "3. Salir"
+        Leer opcion
+
+        Si opcion == 1:
+            Leer nombre, precio y autor
+            Crear un nuevo Libro(nombre, precio, autor)
+            Biblioteca.incrementarContador()
+            Mostrar detalles del libro
+        
+        Si opcion == 2:
+            Leer nombre, precio y edicion
+            Crear una nueva Revista(nombre, precio, edicion)
+            Biblioteca.incrementarContador()
+            Mostrar detalles de la revista
+        
+        Si opcion == 3:
+            Mostrar "Saliendo"
+	
+	default:
+	    Mostrar "Opcion no valida. Intente de nuevo."
+
+    Mientras opcion != 3
+
+    Mostrar "Cantidad total de productos ingresados: " + Biblioteca.contarProductos()
+
+// Main
+
+Funcion main()
+    Llamar a menu()
