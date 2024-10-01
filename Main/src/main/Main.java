@@ -25,7 +25,15 @@ public class Main {
         
         // ciclo do while para el menu
         do {
+            // impresion del menu en consola
+            System.out.println("Menu:");
+            System.out.println("1. Agregar libro");
+            System.out.println("2. Agregar revista");
+            System.out.println("3. Salir");
+            System.out.print("Elija una opcion: ");
             
+            // inicialixe la variable opcion
+            opcion = Integer.parseInt(scanner.nextLine());
         } while (opcion != 3);
     }
 }
