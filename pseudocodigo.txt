@@ -8,3 +8,18 @@ Clase Producto (abstracta)
     Métodos:
         Constructor(nombre, precio)
         imprimirDetalles() (método abstracto)
+
+// clase Libro
+
+Clase Libro (extiende Producto, implementa Describible)
+    Atributos:
+        autor (String)
+
+    Metodos:
+        Constructor(nombre, precio, autor)
+        imprimirDetalles():
+            Mostrar "Titulo: " + nombre
+            Mostrar "Precio: " + precio
+            Mostrar "Autor: " + autor
+        describir():
+            Mostrar "Descripcion del libro: " + nombre + " por " + autor
