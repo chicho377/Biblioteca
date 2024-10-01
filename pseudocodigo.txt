@@ -1,0 +1,10 @@
+// clase Producto
+
+Clase Producto (abstracta)
+    Atributos:
+        nombre (String)
+        precio (double)
+    
+    Métodos:
+        Constructor(nombre, precio)
+        imprimirDetalles() (método abstracto)
