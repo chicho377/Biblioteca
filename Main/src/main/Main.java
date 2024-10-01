@@ -41,11 +41,41 @@ public class Main {
                     // opcion 1 agregar libro
                     System.out.println("Ingrese el nombre del libro:");
                     String nombreLibro = scanner.nextLine();
+                    
+                    // variable para almacenar el precio del libro
+                    double precioLibro;
+                    
+                    // ciclo do while para validacion de que el precio no sea negativo y se pueda seguir ingresando
+                    do {
+                        // se solicita el ingreso del precio
+                        System.out.println("Ingrese el precio del libro:");
+                        precioLibro = Double.parseDouble(scanner.nextLine());
+                        
+                        // validacion de precio negativo
+                        if (precioLibro < 0) {
+                            System.out.println("El precio no puede ser negativo. Intente de nuevo.");
+                        }
+                    } while (precioLibro < 0); // validacion de precio negativo
                     break;
                 case 2:
                     // opcion 2 agregar revista
                     System.out.println("Ingrese el nombre de la revista:");
                     String nombreRevista = scanner.nextLine();
+                    
+                    // variable para almacenar el precio de la revista
+                    double precioRevista;
+                    
+                    // ciclo do while para validacion de que el precio no sea negativo y se pueda seguir ingresando
+                    do {
+                        // se solicita el ingreso del precio en este caso de la revista
+                        System.out.println("Ingrese el precio de la revista:");
+                        precioRevista = Double.parseDouble(scanner.nextLine());
+                        
+                        // validacion de precio negativo
+                        if (precioRevista < 0) {
+                            System.out.println("El precio no puede ser negativo. Intente de nuevo.");
+                        }
+                    } while (precioRevista < 0); // validacion de precio negativo
                     break;
                 case 3:
                     // opcion 3 salir
