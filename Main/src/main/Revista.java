@@ -14,6 +14,6 @@ public class Revista extends Producto {
     // sobre escribe el metodo de la clase Producto
     @Override
     public void imprimirDetalles() {
-        System.out.println("Revista: " + nombre + ", Precio: " + precio + ", Edición: " + edicion);
+        System.out.println("Revista: " + nombre + ", Precio: " + precio + ", Edicion: " + edicion);
     }
 }
