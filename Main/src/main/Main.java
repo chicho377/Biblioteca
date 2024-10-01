@@ -12,4 +12,8 @@ public class Main {
         
     }
     
+    // funcion para el menu
+    public static void menu(){
+    
+    }
 }
