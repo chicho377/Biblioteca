@@ -2,7 +2,7 @@
 package main;
 
 public abstract class Producto {
-    // atributos
+    // atributos de los productos
     private String nombre;
     private double precio;
 
