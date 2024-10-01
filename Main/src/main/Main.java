@@ -21,7 +21,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         
         // variable opcion para el ciclo del menu
-        int opcion;
+        String opcion;
         
         // ciclo do while para el menu
         do {
@@ -29,15 +29,15 @@ public class Main {
             System.out.println("Menu:");
             System.out.println("1. Agregar libro");
             System.out.println("2. Agregar revista");
-            System.out.println("3. Salir");
+            System.out.println("Escriba 'salir' para terminar");
             System.out.print("Elija una opcion: ");
             
             // inicializacion de la variable opcion
-            opcion = Integer.parseInt(scanner.nextLine());
+            opcion = scanner.nextLine().toLowerCase(); // lo pasa a minuscula
             
             // switch para el control de opciones del menu
             switch(opcion){
-                case 1:
+                case "1":
                     // opcion 1 agregar libro
                     System.out.println("Ingrese el nombre del libro:");
                     String nombreLibro = scanner.nextLine();
@@ -70,7 +70,7 @@ public class Main {
                     Biblioteca.contarProductos();
                     
                     break;
-                case 2:
+                case "2":
                     // opcion 2 agregar revista
                     System.out.println("Ingrese el nombre de la revista:");
                     String nombreRevista = scanner.nextLine();
@@ -102,7 +102,7 @@ public class Main {
                     Biblioteca.contarProductos();
                     
                     break;
-                case 3:
+                case "salir":
                     // opcion 3 salir
                     System.out.println("Saliendo");
                     break;
@@ -111,7 +111,7 @@ public class Main {
                     System.out.println("Opcion no valida. Intente de nuevo.");
                     break;
             }
-        } while (opcion != 3);
+        } while (!opcion.equals("salir"));
         
         // mostrar el total de productos ingresados al salir
         System.out.println("Cantidad total de productos ingresados: " + Biblioteca.getContadorProductos());
