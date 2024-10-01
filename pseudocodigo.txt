@@ -36,3 +36,20 @@ Clase Revista (extiende Producto)
             Mostrar "Titulo: " + nombre
             Mostrar "Precio: " + precio
             Mostrar "Edicion: " + edicion
+
+// interfaz Describible
+
+Interfaz Describible
+    Metodo describir()
+
+// clase Biblioteca
+
+Clase Biblioteca
+    Atributo estatico:
+        contadorProductos (int)
+
+    Metodos:
+        Metodo estatico contarProductos():
+            Retornar contadorProductos
+        Metodo estatico incrementarContador():
+            contadorProductos += 1
