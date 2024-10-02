@@ -26,10 +26,13 @@ public class Main {
         // ciclo do while para el menu
         do {
             // impresion del menu en consola
-            System.out.println("Menu:");
+            System.out.println("\n===============================");
+            System.out.println("        MENU PRINCIPAL         ");
+            System.out.println("===============================");
             System.out.println("1. Agregar libro");
             System.out.println("2. Agregar revista");
             System.out.println("Escriba 'salir' para terminar");
+            System.out.println("===============================");
             System.out.print("Elija una opcion: ");
             
             // inicializacion de la variable opcion
@@ -39,6 +42,7 @@ public class Main {
             switch(opcion){
                 case "1":
                     // opcion 1 agregar libro
+                    System.out.println("----- Agregar Libro -----");
                     System.out.println("Ingrese el nombre del libro:");
                     String nombreLibro = scanner.nextLine();
                     
@@ -72,6 +76,7 @@ public class Main {
                     break;
                 case "2":
                     // opcion 2 agregar revista
+                    System.out.println("----- Agregar Revista -----");
                     System.out.println("Ingrese el nombre de la revista:");
                     String nombreRevista = scanner.nextLine();
                     
@@ -114,6 +119,8 @@ public class Main {
         } while (!opcion.equals("salir"));
         
         // mostrar el total de productos ingresados al salir
+        System.out.println("\n===============================");
         System.out.println("Cantidad total de productos ingresados: " + Biblioteca.getContadorProductos());
+        System.out.println("===============================\n");
     }
 }
