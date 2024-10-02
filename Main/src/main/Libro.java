@@ -14,12 +14,18 @@ public class Libro extends Producto implements Describible {
     // sobre escribe el metodo de la clase Producto
     @Override
     public void imprimirDetalles() {
+        System.out.println("=================================");
+        System.out.println("           DETALLES DEL LIBRO           ");
+        System.out.println("=================================");
         System.out.println("Libro: " + nombre + ", Precio: " + precio + ", Autor: " + autor);
+        System.out.println("=================================\n");
     }
 
     // sobre escribe el metodo de la interfaz Describible
     @Override
     public void describir() {
-        System.out.println("Este es un libro titulado " + nombre + " por " + autor);
+        System.out.println("\n---------------------------------");
+        System.out.println("Descripcion: Este es un libro titulado " + nombre + " escrito por " + autor);
+        System.out.println("---------------------------------\n");
     }
 }
